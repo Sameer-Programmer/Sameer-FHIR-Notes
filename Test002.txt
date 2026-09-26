@@ -1,0 +1,46 @@
+                 Clinical Guideline
+                         │
+        ┌────────────────┼─────────────────┐
+        ↓                ↓                 ↓
+ ContactDetail      Contributor      RelatedArtifact
+ "Who to contact?"  "Who contributed?" "What is it based on?"
+        │                │                 │
+        ↓                ↓                 ↓
+     Hospital          Doctors          WHO Guideline
+
+
+                         │
+                         ↓
+                   UsageContext
+                  "Where does it apply?"
+                         │
+                  Diabetes / Adult
+
+
+                         │
+                         ↓
+                  DataRequirement
+                  "What data is needed?"
+                         │
+                  Blood Glucose
+
+
+                         │
+                         ↓
+                  TriggerDefinition
+                  "When does it run?"
+                         │
+             Blood glucose result arrives
+
+
+                         │
+                         ↓
+                   Expression
+                  "What is the logic?"
+                         │
+                  glucose > 200
+
+
+                         │
+                         ↓
+                 Clinical Decision
