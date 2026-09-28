@@ -1,0 +1,41 @@
+{
+    "resourceType": "Patient",
+    "id": "8633",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2026-09-28T18:41:15.456+00:00",
+        "source": "#eCb73BGgAufKqvJM"
+    },
+    "active": true,
+    "name": [
+        {
+            "use": "official",
+            "family": "Lemke",
+            "given": [
+                "Jerad"
+            ]
+        }
+    ],
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "281-860-0014",
+            "use": "mobile"
+        }
+    ],
+    "gender": "female",
+    "birthDate": "1990-05-12",
+    "deceasedBoolean": false,
+    "address": [
+        {
+            "line": [
+                "372 Padberg Inlet"
+            ],
+            "city": "West Kelly",
+            "state": "IL",
+            "postalCode": "518360"
+            "country": "USA"
+        }
+    ],
+    "multipleBirthBoolean": false
+}
