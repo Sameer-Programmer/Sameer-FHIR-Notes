@@ -1,0 +1,39 @@
+{
+  "resourceType": "Specimen",
+  "id": "spec-1001",
+
+  "identifier": [
+    {
+      "system": "http://hospital.example.org/specimens",
+      "value": "SP-20260928-001"
+    }
+  ],
+
+  "status": "available",
+
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "119297000",
+        "display": "Blood specimen"
+      }
+    ]
+  },
+
+  "subject": {
+    "reference": "Patient/BN12345"
+  },
+
+  "receivedTime": "2026-09-28T10:00:00+05:30",
+
+  "collection": {
+    "collectedDateTime": "2026-09-28T09:30:00+05:30",
+    "quantity": {
+      "value": 5,
+      "unit": "mL",
+      "system": "http://unitsofmeasure.org",
+      "code": "mL"
+    }
+  }
+}
