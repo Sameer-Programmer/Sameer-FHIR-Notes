@@ -1,0 +1,48 @@
+{
+  "resourceType": "DiagnosticReport",
+  "id": "report-1001",
+
+  "status": "final",
+
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "code": "LAB",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "58410-2",
+        "display": "Complete blood count (CBC) panel"
+      }
+    ]
+  },
+
+  "subject": {
+    "reference": "Patient/BN12345"
+  },
+
+  "effectiveDateTime": "2026-09-28T10:30:00+05:30",
+
+  "issued": "2026-09-28T11:00:00+05:30",
+
+  "result": [
+    {
+      "reference": "Observation/obs-1001"
+    },
+    {
+      "reference": "Observation/obs-1002"
+    },
+    {
+      "reference": "Observation/obs-1003"
+    }
+  ]
+}
