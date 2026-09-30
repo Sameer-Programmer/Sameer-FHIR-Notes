@@ -1,0 +1,56 @@
+                     EHR Application
+                         │
+                         ▼
+                 1. Patient
+                         │
+                         ▼
+                2. Appointment
+                         │
+                         ▼
+                 3. Encounter
+                         │
+              ┌──────────┴──────────┐
+              │                     │
+              ▼                     ▼
+        4. ServiceRequest       8. Condition
+              │                     │
+              ▼                     │
+         5. Specimen                │
+              │                     │
+              ▼                     │
+        6. Observation              │
+              │                     │
+              ▼                     │
+      7. DiagnosticReport           │
+              │                     │
+              └──────────┬──────────┘
+                         │
+                         ▼
+               9. MedicationRequest
+                         │
+                         ▼
+                  10. Procedure
+                         │
+                         ▼
+                  11. ChargeItem
+                         │
+                         ▼
+                    12. Account
+                         │
+                         ▼
+                   13. Coverage
+                         │
+                         ▼
+                    14. Claim
+                         │
+                         ▼
+                15. ClaimResponse
+                         │
+                         ▼
+                    16. Invoice
+                         │
+                         ▼
+                 17. PaymentNotice
+                         │
+                         ▼
+             18. PaymentReconciliation
