@@ -1,0 +1,39 @@
+{
+  "resourceType": "PaymentNotice",
+  "id": "paymentnotice-1001",
+
+  "status": "active",
+
+  "request": {
+    "reference": "Claim/claim-1001"
+  },
+
+  "response": {
+    "reference": "ClaimResponse/claimresponse-1001"
+  },
+
+  "created": "2026-09-30",
+
+  "provider": {
+    "reference": "Organization/hospital-001"
+  },
+
+  "payment": {
+    "reference": "PaymentReconciliation/payment-1001"
+  },
+
+  "paymentDate": "2026-09-30",
+
+  "payee": {
+    "reference": "Organization/hospital-001"
+  },
+
+  "recipient": {
+    "reference": "Organization/insurance-001"
+  },
+
+  "amount": {
+    "value": 80,
+    "currency": "USD"
+  }
+}
