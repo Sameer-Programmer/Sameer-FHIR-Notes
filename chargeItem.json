@@ -1,0 +1,52 @@
+{
+  "resourceType": "ChargeItem",
+  "id": "charge-1001",
+
+  "status": "billable",
+
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "91251008",
+        "display": "Physical therapy procedure"
+      }
+    ],
+    "text": "Physical Therapy"
+  },
+
+  "subject": {
+    "reference": "Patient/12345",
+    "display": "John Doe"
+  },
+
+  "context": {
+    "reference": "Encounter/2001"
+  },
+
+  "occurrenceDateTime": "2026-09-30T14:45:00+05:30",
+
+  "performer": [
+    {
+      "actor": {
+        "reference": "Practitioner/67890",
+        "display": "Dr. Smith"
+      }
+    }
+  ],
+
+  "quantity": {
+    "value": 1
+  },
+
+  "priceOverride": {
+    "value": 100.00,
+    "currency": "USD"
+  },
+
+  "note": [
+    {
+      "text": "Physical therapy session charge."
+    }
+  ]
+}
