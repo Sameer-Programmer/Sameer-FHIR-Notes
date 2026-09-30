@@ -1,0 +1,36 @@
+Patient
+  ↓
+Appointment
+  ↓
+Encounter
+  ↓
+Condition
+  ↓
+ServiceRequest
+  ↓
+Specimen
+  ↓
+Observation
+  ↓
+DiagnosticReport
+  ↓
+MedicationRequest
+  ↓
+Procedure
+
+
+ChargeItem
+  ↓
+Account
+  ↓
+Coverage
+  ↓
+Claim
+  ↓
+ClaimResponse
+  ↓
+Invoice
+  ↓
+PaymentNotice
+  ↓
+PaymentReconciliation
