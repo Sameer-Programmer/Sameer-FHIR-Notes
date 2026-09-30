@@ -1,0 +1,65 @@
+{
+  "resourceType": "Appointment",
+  "id": "appt-1001",
+
+  "status": "booked",
+
+  "appointmentType": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0276",
+        "code": "ROUTINE",
+        "display": "Routine appointment"
+      }
+    ],
+    "text": "Routine appointment"
+  },
+
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "38341003",
+          "display": "Hypertensive disorder"
+        }
+      ],
+      "text": "Hypertension follow-up"
+    }
+  ],
+
+  "description": "Follow-up consultation for hypertension",
+
+  "start": "2026-10-05T10:00:00+05:30",
+  "end": "2026-10-05T10:30:00+05:30",
+
+  "created": "2026-09-30T09:00:00+05:30",
+
+  "participant": [
+    {
+      "actor": {
+        "reference": "Patient/12345",
+        "display": "John Doe"
+      },
+      "status": "accepted"
+    },
+    {
+      "actor": {
+        "reference": "Practitioner/67890",
+        "display": "Dr. Smith"
+      },
+      "status": "accepted"
+    },
+    {
+      "actor": {
+        "reference": "Location/clinic-01",
+        "display": "Main Clinic"
+      },
+      "status": "accepted"
+    }
+  ],
+
+  "minutesDuration": 30,
+
+  "comment": "Patient should bring previous medical reports."
+}
