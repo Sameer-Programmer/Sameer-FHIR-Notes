@@ -1,0 +1,43 @@
+{
+  "resourceType": "Invoice",
+  "id": "invoice-1001",
+
+  "status": "issued",
+
+  "subject": {
+    "reference": "Patient/12345"
+  },
+
+  "recipient": {
+    "reference": "Patient/12345"
+  },
+
+  "date": "2026-09-30",
+
+  "issuer": {
+    "reference": "Organization/hospital-001"
+  },
+
+  "account": {
+    "reference": "Account/account-1001"
+  },
+
+  "lineItem": [
+    {
+      "sequence": 1,
+      "chargeItemReference": {
+        "reference": "ChargeItem/charge-1001"
+      }
+    }
+  ],
+
+  "totalNet": {
+    "value": 100,
+    "currency": "USD"
+  },
+
+  "totalGross": {
+    "value": 100,
+    "currency": "USD"
+  }
+}
