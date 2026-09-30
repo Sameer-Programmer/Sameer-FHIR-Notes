@@ -1,0 +1,92 @@
+                          EHR
+                              │
+                              ▼
+                       1. Patient
+                              │
+                              ▼
+                    2. Appointment
+                       with Provider
+                              │
+                              ▼
+                       3. Encounter
+                              │
+                              ▼
+                    ┌─────────────────┐
+                    │    Assessment   │
+                    │                 │
+                    │ • Alcohol-use   │
+                    │   history       │
+                    │ • Symptoms      │
+                    │ • Clinical      │
+                    │   assessment    │
+                    │ • Risk factors  │
+                    │ • Previous      │
+                    │   treatment     │
+                    └────────┬────────┘
+                             │
+                             ▼
+                    8. Condition
+                  (Clinical Diagnosis)
+                             │
+                             ▼
+                    ┌─────────────────┐
+                    │ Treatment Plan  │
+                    │                 │
+                    │ • Treatment     │
+                    │   goals         │
+                    │ • Counseling    │
+                    │ • Medication    │
+                    │   management    │
+                    │ • Lab monitoring│
+                    │ • Follow-up     │
+                    └────────┬────────┘
+                             │
+               ┌─────────────┼──────────────┐
+               │             │              │
+               ▼             ▼              ▼
+        4. ServiceRequest  9. Medication  10. Procedure
+               │             Request
+               ▼
+          5. Specimen
+               │
+               ▼
+        6. Observation
+               │
+               ▼
+       7. DiagnosticReport
+               │
+               └──────────────┬──────────────┘
+                              │
+                              ▼
+                    Ongoing Treatment
+                              │
+                              ▼
+                       11. ChargeItem
+                              │
+                              ▼
+                         12. Account
+                              │
+                              ▼
+                        13. Coverage
+                              │
+                              ▼
+                          14. Claim
+                              │
+                              ▼
+                     15. ClaimResponse
+                              │
+                              ▼
+                         16. Invoice
+                              │
+                              ▼
+                      17. PaymentNotice
+                              │
+                              ▼
+                  18. PaymentReconciliation
+                              │
+                              ▼
+                       Follow-up Care
+                              │
+                              ▼
+                    New Appointment /
+                       New Encounter
