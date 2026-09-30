@@ -1,0 +1,61 @@
+{
+  "resourceType": "Procedure",
+  "id": "procedure-1001",
+
+  "status": "completed",
+
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "91251008",
+        "display": "Physical therapy procedure"
+      }
+    ],
+    "text": "Physical Therapy"
+  },
+
+  "subject": {
+    "reference": "Patient/12345",
+    "display": "John Doe"
+  },
+
+  "encounter": {
+    "reference": "Encounter/2001"
+  },
+
+  "performedPeriod": {
+    "start": "2026-09-30T14:00:00+05:30",
+    "end": "2026-09-30T14:45:00+05:30"
+  },
+
+  "performer": [
+    {
+      "actor": {
+        "reference": "Practitioner/67890",
+        "display": "Dr. Smith"
+      },
+      "function": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "159026005",
+            "display": "Physiotherapist"
+          }
+        ]
+      }
+    }
+  ],
+
+  "reasonReference": [
+    {
+      "reference": "Condition/condition-1001"
+    }
+  ],
+
+  "note": [
+    {
+      "text": "Patient completed a 45-minute physical therapy session."
+    }
+  ]
+}
