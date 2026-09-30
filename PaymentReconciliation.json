@@ -1,0 +1,58 @@
+{
+  "resourceType": "PaymentReconciliation",
+  "id": "payment-reconciliation-1001",
+
+  "status": "active",
+
+  "created": "2026-09-30",
+
+  "paymentIssuer": {
+    "reference": "Organization/insurance-001"
+  },
+
+  "request": {
+    "reference": "Claim/claim-1001"
+  },
+
+  "requestor": {
+    "reference": "Organization/hospital-001"
+  },
+
+  "outcome": "complete",
+
+  "disposition": "Payment successfully reconciled",
+
+  "paymentDate": "2026-09-30",
+
+  "paymentAmount": {
+    "value": 80,
+    "currency": "USD"
+  },
+
+  "detail": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/payment-type",
+            "code": "payment"
+          }
+        ]
+      },
+      "request": {
+        "reference": "Claim/claim-1001"
+      },
+      "submitter": {
+        "reference": "Organization/hospital-001"
+      },
+      "response": {
+        "reference": "ClaimResponse/claimresponse-1001"
+      },
+      "date": "2026-09-30",
+      "amount": {
+        "value": 80,
+        "currency": "USD"
+      }
+    }
+  ]
+}
