@@ -1,0 +1,24 @@
+1. Patient
+
+A patient comes to the behavioral-health/addiction-treatment facility for help with Alcohol Use Disorder.
+
+The patient is registered in BestNotes.
+
+Patient
+ ├── Patient ID
+ ├── Name
+ ├── DOB
+ ├── Gender
+ └── Contact information
+
+FHIR:
+
+Patient
+
+This becomes the central patient reference for many other resources.
+
+For example:
+
+"subject": {
+    "reference": "Patient/12345"
+}
