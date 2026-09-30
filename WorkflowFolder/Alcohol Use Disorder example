@@ -3,21 +3,39 @@ Patient
 Appointment
   ↓
 Encounter
+  │
+  ├── Assessment          ← NOT a FHIR resource by itself
+  │    ├── Alcohol-use history
+  │    ├── Symptoms
+  │    ├── Previous treatment
+  │    ├── Clinical findings
+  │    └── Provider assessment
+  │
   ↓
-Condition
+Condition                ← FHIR Resource
+  │
+  ├── Treatment Plan     ← NOT necessarily a single resource
+  │    ├── Counseling
+  │    ├── Medication management
+  │    ├── Laboratory monitoring
+  │    ├── Follow-up appointments
+  │    └── Other interventions
+  │
   ↓
-ServiceRequest
+ServiceRequest          ← FHIR Resource
   ↓
-Specimen
+Specimen                ← FHIR Resource
   ↓
-Observation
+Observation             ← FHIR Resource
   ↓
-DiagnosticReport
+DiagnosticReport        ← FHIR Resource
   ↓
-MedicationRequest
+MedicationRequest       ← FHIR Resource
   ↓
-Procedure
+Procedure               ← FHIR Resource
 
+
+              FINANCIAL / RCM
 
 ChargeItem
   ↓
