@@ -22,3 +22,240 @@ For example:
 "subject": {
     "reference": "Patient/12345"
 }
+===================================================================================================================================================
+2. Appointment
+
+The patient schedules an appointment with a counselor or practitioner.
+
+Patient
+   ↓
+Appointment
+   ↓
+Counselor / Practitioner
+
+FHIR:
+
+Appointment
+
+The appointment represents the scheduled event.
+===================================================================================================================================================
+
+3. Encounter
+
+The patient arrives and the actual clinical visit begins.
+
+Appointment
+     ↓
+Patient arrives
+     ↓
+Encounter
+
+FHIR:
+
+Encounter
+
+The Encounter represents the actual interaction/visit.
+
+For example:
+
+Counseling session for Alcohol Use Disorder.
+===================================================================================================================================================
+4. ServiceRequest
+
+During the encounter, the provider may request a laboratory test.
+
+For example:
+
+Provider orders CBC.
+
+Encounter
+    ↓
+ServiceRequest
+    ↓
+CBC
+
+FHIR:
+
+ServiceRequest
+
+Think:
+
+ServiceRequest = something the provider is asking to be performed.
+===================================================================================================================================================
+
+5. Specimen
+
+The patient provides a blood sample.
+
+ServiceRequest
+      ↓
+Blood sample collected
+      ↓
+Specimen
+
+FHIR:
+
+Specimen
+
+The Specimen represents the physical sample being tested.
+===================================================================================================================================================
+
+6. Observation
+
+The laboratory analyzes the specimen and produces individual results.
+
+For example:
+
+Hemoglobin → 14.2 g/dL
+WBC        → 7.5 thousand/µL
+Platelets  → 250 thousand/µL
+
+Each result can be represented as:
+
+Observation
+
+So:
+
+Observation = individual measurement/result.
+===================================================================================================================================================
+7. DiagnosticReport
+
+The individual observations can be grouped into an overall laboratory report.
+
+Observation
+Observation
+Observation
+    ↓
+DiagnosticReport
+
+For example:
+
+CBC Diagnostic Report
+ ├── Hemoglobin
+ ├── WBC
+ └── Platelets
+
+So remember:
+
+Observation = individual result
+DiagnosticReport = overall report
+===================================================================================================================================================
+
+8. Condition
+
+During the assessment, the provider identifies/document a diagnosis.
+
+For our example:
+
+Alcohol Use Disorder
+
+FHIR:
+
+Condition
+
+Think:
+
+Condition = What medical/clinical problem does the patient have?
+===================================================================================================================================================
+9. MedicationRequest — medication prescribed
+
+After assessing the patient with Alcohol Use Disorder, suppose the provider decides that medication is appropriate as part of the treatment plan.
+
+In BestNotes, the provider may enter details such as:
+
+Patient          → John Doe
+Medication       → Example medication
+Dosage           → 500 mg
+Route            → Oral
+Frequency        → Twice daily
+Duration         → 30 days
+Quantity         → 60 tablets
+Start Date       → 2026-09-30
+Prescriber       → Dr. Smith
+Reason            → Alcohol Use Disorder
+Encounter        → E1001
+
+The application can then represent the prescription/order using:
+
+MedicationRequest
+Example FHIR
+{
+  "resourceType": "MedicationRequest",
+  "id": "MR1001",
+
+  "status": "active",
+
+  "intent": "order",
+
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "EXAMPLE-CODE",
+        "display": "Example Medication"
+      }
+    ],
+    "text": "Example Medication"
+  },
+
+  "subject": {
+    "reference": "Patient/P1001"
+  },
+
+  "encounter": {
+    "reference": "Encounter/E1001"
+  },
+
+  "authoredOn": "2026-09-30",
+
+  "requester": {
+    "reference": "Practitioner/PR1001"
+  },
+
+  "reasonReference": [
+    {
+      "reference": "Condition/C1001"
+    }
+  ],
+
+  "dosageInstruction": [
+    {
+      "text": "Take 1 tablet by mouth twice daily for 30 days",
+      "timing": {
+        "repeat": {
+          "frequency": 2,
+          "period": 1,
+          "periodUnit": "d"
+        }
+      },
+      "route": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "display": "Oral route"
+          }
+        ]
+      },
+      "doseAndRate": [
+        {
+          "doseQuantity": {
+            "value": 500,
+            "unit": "mg"
+          }
+        }
+      ]
+    }
+  ],
+
+  "dispenseRequest": {
+    "quantity": {
+      "value": 60,
+      "unit": "tablet"
+    },
+    "expectedSupplyDuration": {
+      "value": 30,
+      "unit": "days"
+    }
+  }
+}
+===================================================================================================================================================
