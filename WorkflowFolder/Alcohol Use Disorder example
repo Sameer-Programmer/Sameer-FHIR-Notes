@@ -52,3 +52,13 @@ Invoice
 PaymentNotice
   ↓
 PaymentReconciliation
+
+⭐ The key thing to remember
+
+Assessment = what the provider evaluates.
+
+Condition = what clinical problem/diagnosis is documented.
+
+Treatment Plan = what the provider plans to do about that problem.
+
+FHIR resources = how the relevant clinical data is represented/exchanged.
