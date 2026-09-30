@@ -54,3 +54,45 @@
                          │
                          ▼
              18. PaymentReconciliation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=========================================================================================================================================
+
+Patient
+  ↓
+Appointment
+  ↓
+Encounter
+  ↓
+Assessment / Condition
+  ↓
+Treatment
+  ↓
+Lab / Medication / Procedure
+  ↓
+Billing / RCM
+  ↓
+PaymentReconciliation
+  ↓
+Follow-up
+  ↓
+Appointment
+  ↓
+Encounter
+  ↓
+...
