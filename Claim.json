@@ -1,0 +1,80 @@
+{
+  "resourceType": "Claim",
+  "id": "claim-1001",
+
+  "status": "active",
+
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+        "code": "professional",
+        "display": "Professional"
+      }
+    ]
+  },
+
+  "use": "claim",
+
+  "patient": {
+    "reference": "Patient/12345"
+  },
+
+  "created": "2026-09-30",
+
+  "provider": {
+    "reference": "Practitioner/67890"
+  },
+
+  "priority": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+        "code": "normal",
+        "display": "Normal"
+      }
+    ]
+  },
+
+  "insurance": [
+    {
+      "sequence": 1,
+      "focal": true,
+      "coverage": {
+        "reference": "Coverage/coverage-1001"
+      }
+    }
+  ],
+
+  "item": [
+    {
+      "sequence": 1,
+      "productOrService": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "91251008",
+            "display": "Physical therapy procedure"
+          }
+        ]
+      },
+      "servicedDate": "2026-09-30",
+      "quantity": {
+        "value": 1
+      },
+      "unitPrice": {
+        "value": 100,
+        "currency": "USD"
+      },
+      "net": {
+        "value": 100,
+        "currency": "USD"
+      }
+    }
+  ],
+
+  "total": {
+    "value": 100,
+    "currency": "USD"
+  }
+}
